@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMasterPage.master.cs" Inherits="UserMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+            background:white;
+
+        }
+        .navbar {
+            overflow:hidden;
+            background:#0b2463;
+            font-family:Arial;
+            font-size:14px;
+          
+
+        }
+            .navbar a {
+                float:left;
+                width:100px;
+                display:block;
+                color:#fff;
+                text-align:center;
+                padding:20px 15px;
+                text-decoration:none;
+                text-transform:uppercase;
+                font-weight:bold;
+                border-bottom:4px solid transparent;
+                
+            }
+                .navbar a:hover {
+                    border-bottom:4px solid orange;
+                }
+        .cen {
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="cen">
+       
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="30pt" ForeColor="#000099" Text="Teacher Reqruitment System" ToolTip="Find Better"></asp:Label>
+              
+        <div class="navbar">
+            <a href="userhome.aspx">Home</a>
+            <a href="userabout.aspx">About</a>
+            <a href="usersearch.aspx">Search</a>
+            <a href="usercontact.aspx">Contact</a>
+            <a href="userfeedback.aspx">Feedback</a>
+            <a href="userprofile.aspx">Profile</a>
+           <a href="userlogin.aspx">Login</a>
+              <a href="userhome.aspx">Logout</a>
+        </div>
+    
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                 
+    </div>
+    </form>
+  
+</body>
+</html>
