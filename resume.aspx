@@ -30,6 +30,9 @@
     <p>
         <br />
     </p>
+    <asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
     <table class="auto-style1">
         <tr>
             <td class="auto-style3">&nbsp;</td>
@@ -115,8 +118,6 @@
             </td>
             <td class="auto-style6">
                 <asp:DropDownList ID="ddlhigh" runat="server">
-                    <asp:ListItem>10th pass</asp:ListItem>
-                    <asp:ListItem>12th pass</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
@@ -132,8 +133,6 @@
             </td>
             <td class="auto-style6">
                 <asp:DropDownList ID="ddlspecial" runat="server">
-                    <asp:ListItem>Programming</asp:ListItem>
-                    <asp:ListItem>Designing</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
@@ -199,5 +198,7 @@
             <td>&nbsp;</td>
         </tr>
     </table>
+                </ContentTemplate>
+            </asp:UpdatePanel>
 </asp:Content>
 

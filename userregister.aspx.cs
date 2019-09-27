@@ -13,26 +13,42 @@ public partial class Default5 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            //txtfname.Text = "";
+        }
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connection"].ToString());
         con.Open();
-        SqlCommand cmd = new SqlCommand("insert into userregister values (@First_Name,@Last_Name,@Email,@Contact_Number,@Gender,@Address,@City,@Password)", con);
-        cmd.Parameters.AddWithValue("First_Name", txtfname.Text);
-        cmd.Parameters.AddWithValue("Last_Name", txtlaname.Text);
-        cmd.Parameters.AddWithValue("Email", txtemail.Text);
-        cmd.Parameters.AddWithValue("Contact_Number", txtcontact.Text);
-        cmd.Parameters.AddWithValue("Gender", rdbmale.Text);
-        cmd.Parameters.AddWithValue("Address", txtaddress.Text);
-        cmd.Parameters.AddWithValue("City", txtcity.Text);
-        cmd.Parameters.AddWithValue("Password", txtpassword.Text);
-        cmd.ExecuteNonQuery();
+        SqlCommand cmd = new SqlCommand("select count(*) from userregister where email ='" + txtemail.Text + "'", con);
+        int c1 = Int32.Parse(cmd.ExecuteScalar().ToString());
+        if (c1 == 1)
+        {
+            lblerror.Text = "Email is Already Exist";
 
-        con.Close();
-        Response.Redirect("userlogin.aspx?id=registor");
-        lblerror.Text = "you have successfully register";
-    
+        }
+        else
+        {
+            SqlCommand cmd1 = new SqlCommand("insert into userregister values (@First_Name,@Last_Name,@Email,@Contact_Number,@Gender,@Address,@City,@Password)", con);
+            cmd1.Parameters.AddWithValue("First_Name", txtfname.Text);
+            cmd1.Parameters.AddWithValue("Last_Name", txtlaname.Text);
+            cmd1.Parameters.AddWithValue("Email", txtemail.Text);
+            cmd1.Parameters.AddWithValue("Contact_Number", txtcontact.Text);
+            cmd1.Parameters.AddWithValue("Gender", rdbmale.Text);
+            cmd1.Parameters.AddWithValue("Address", txtaddress.Text);
+            cmd1.Parameters.AddWithValue("City", txtcity.Text);
+            cmd1.Parameters.AddWithValue("Password", txtpassword.Text);
+            Response.Write(cmd1.CommandText);
+
+            cmd1.ExecuteNonQuery();
+            con.Close();
+            lblerror.Text = "you have successfully register";
+
+           
+            Response.Redirect("userlogin.aspx?id=registor");
+           
+        }
     }
 }
