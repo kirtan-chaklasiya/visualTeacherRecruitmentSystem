@@ -24,12 +24,47 @@
             height: 23px;
             text-align: left;
         }
+        .tname,.taddress,.tcontact,.temail,.thigh,.tspec,.tinsti,.tpass {
+            width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+        }
+             .login-form {
+                width: 80%;
+                background: #f1f1f1;
+                height: 900px;
+                padding: 80px 40px;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 92%;
+                transform: translate(-50%,-50%);
+        }
+        .tsubmit {
+                 display:block;
+                width:15%;
+                height:50px;
+                border:none;
+                background:linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+                background-size:200%;
+                color:#fff;
+                outline:none;
+                cursor:pointer;
+                transition:.5s;
+            }
+            .tsubmit:hover {
+                background-position:right;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <p>
-        <br />
-    </p>
+                    <div class="login-form">
+
+   
     <asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
@@ -53,7 +88,7 @@
                 <asp:Label ID="lblname" runat="server" Text="Name:"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtname" runat="server" CssClass="tname"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -65,7 +100,7 @@
                 <asp:Label ID="lbladdress" runat="server" Text="Address:"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtaddress" runat="server" TextMode="MultiLine"></asp:TextBox>
+                <asp:TextBox ID="txtaddress" runat="server" TextMode="MultiLine" CssClass="taddress"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -77,7 +112,7 @@
                 <asp:Label ID="lblcontact" runat="server" Text="Contact Number:"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtcontact" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtcontact" runat="server" CssClass="tcontact"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -89,7 +124,7 @@
                 <asp:Label ID="lblemail" runat="server" Text="E_mail:"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtemail" runat="server" CssClass="temail"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -117,7 +152,7 @@
                 <asp:Label ID="Label8" runat="server" Text="Highest Qualification:"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:DropDownList ID="ddlhigh" runat="server">
+                <asp:DropDownList ID="ddlhigh" runat="server" CssClass="thigh">
                 </asp:DropDownList>
             </td>
         </tr>
@@ -132,7 +167,7 @@
                 <asp:Label ID="Label9" runat="server" Text="Specialization:"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:DropDownList ID="ddlspecial" runat="server">
+                <asp:DropDownList ID="ddlspecial" runat="server" CssClass="tspec">
                 </asp:DropDownList>
             </td>
         </tr>
@@ -145,7 +180,7 @@
                 <asp:Label ID="lblgraduation" runat="server" Text="Institute:"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtinstitute" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtinstitute" runat="server" CssClass="tinsti"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -157,7 +192,7 @@
                 <asp:Label ID="lblpostgraduation" runat="server" Text="Passing Year:"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:DropDownList ID="ddlpass" runat="server">
+                <asp:DropDownList ID="ddlpass" runat="server" CssClass="tpass">
                     <asp:ListItem>2015</asp:ListItem>
                     <asp:ListItem>2016</asp:ListItem>
                     <asp:ListItem>2017</asp:ListItem>
@@ -174,7 +209,7 @@
             <td class="auto-style4">
                 &nbsp;</td>
             <td class="auto-style7">
-                <asp:Button ID="Next" runat="server" Font-Bold="True" OnClick="btnsubmit_Click" Text="Submit" style="height: 26px; text-align: left" />
+                <asp:Button ID="Next" runat="server" Font-Bold="True" OnClick="btnsubmit_Click" Text="Submit" style="height: 26px; text-align: left" CssClass="tsubmit" />
             </td>
         </tr>
         <tr>
@@ -200,5 +235,6 @@
     </table>
                 </ContentTemplate>
             </asp:UpdatePanel>
+                        </div>
 </asp:Content>
 

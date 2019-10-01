@@ -8,6 +8,17 @@
         .auto-style2 {
             text-align: left;
         }
+        .login-form {
+                width: 80%;
+                background: #f1f1f1;
+                height: 800px;;
+                padding: 80px 40px;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 85%;
+                transform: translate(-50%,-50%);
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -16,6 +27,8 @@
 <p>
 
 </p>    
+            <div class="login-form">
+
     <table class="auto-style1">
         <tr>
             <td class="auto-style2">
@@ -46,5 +59,6 @@
             <td class="auto-style2">&nbsp;</td>
         </tr>
 </table>
+                </div>
     </asp:Content>
 

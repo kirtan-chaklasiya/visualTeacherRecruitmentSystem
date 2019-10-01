@@ -54,7 +54,6 @@
             <a href="userhome.aspx">Home</a>
             <a href="userabout.aspx">About</a>
             <a href="usersearch.aspx">Search</a>
-            <a href="usercontact.aspx">Contact</a>
             <a href="userfeedback.aspx">Feedback</a>
             <a href="userprofile.aspx">Profile</a>
            <a href="userlogin.aspx">Login</a>

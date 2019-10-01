@@ -1,8 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMasterPage.master" AutoEventWireup="true" CodeFile="usersearch.aspx.cs" Inherits="Default6" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style>
+        .login-form {
+                width: 80%;
+                background: #f1f1f1;
+                height: 800px;;
+                padding: 80px 40px;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 85%;
+                transform: translate(-50%,-50%);
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+                <div class="login-form">
+
     <p>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="job_id" DataSourceID="SqlDataSource1" GridLines="None" Width="100%">
             <Columns>
@@ -39,5 +54,6 @@
     </p>
     <p>
     </p>
+                    </div>
 </asp:Content>
 

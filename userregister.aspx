@@ -87,8 +87,10 @@
 
             <!--<asp:Label ID="lblgender" Text="Gender" CssClass="lblgender" runat="server" />-->
         
-            <asp:RadioButton ID="rdbmale" runat="server" GroupName="gender" Text="Male" CssClass="rdbgender" ForeColor="#8B8B8B" /><asp:RadioButton ID="rdbfemale" runat="server" GroupName="gender" Text="Female" CssClass="rdbgender" ForeColor="#8B8B8B" />
-
+            <asp:RadioButton ID="rdbmale" runat="server" GroupName="gender" Text="Male" CssClass="rdbgender" ForeColor="#8B8B8B" />
+            
+            <asp:RadioButton ID="rdbfemale" runat="server" GroupName="gender" Text="Female" CssClass="rdbgender" ForeColor="#8B8B8B" />
+         
          
             <!--<asp:Label ID="lbladdress" Text="Address" CssClass="lbladdress" runat="server" />-->
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtaddress" ErrorMessage="Please enter your curreny address" ForeColor="Red"></asp:RequiredFieldValidator>
