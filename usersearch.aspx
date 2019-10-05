@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMasterPage.master" AutoEventWireup="true" CodeFile="usersearch.aspx.cs" Inherits="Default6" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="bootstyle.css" rel="stylesheet" />
+
     <style>
         .login-form {
                 width: 80%;
@@ -12,12 +14,16 @@
                 left: 50%;
                 top: 85%;
                 transform: translate(-50%,-50%);
+                                box-shadow:1px 2px 50px 0px rgb(9, 23, 66);
+
         }
+     
+          
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
                 <div class="login-form">
-
+                       <!--<asp:TextBox ID="txtsearch" runat="server" CssClass="txtsearch" placeholder="Search Job title / keyword..."></asp:TextBox>-->
     <p>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="job_id" DataSourceID="SqlDataSource1" GridLines="None" Width="100%">
             <Columns>

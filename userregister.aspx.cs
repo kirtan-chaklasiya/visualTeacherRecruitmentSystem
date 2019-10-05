@@ -20,6 +20,16 @@ public partial class Default5 : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        string gen = string.Empty;
+        if (rdbmale.Checked)
+        {
+            gen = "Male";
+        }
+        else if (rdbfemale.Checked)
+        {
+            gen = "Female";
+        }
+    
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connection"].ToString());
         con.Open();
         SqlCommand cmd = new SqlCommand("select count(*) from userregister where email ='" + txtemail.Text + "'", con);
@@ -36,9 +46,9 @@ public partial class Default5 : System.Web.UI.Page
             cmd1.Parameters.AddWithValue("Last_Name", txtlaname.Text);
             cmd1.Parameters.AddWithValue("Email", txtemail.Text);
             cmd1.Parameters.AddWithValue("Contact_Number", txtcontact.Text);
-            cmd1.Parameters.AddWithValue("Gender", rdbmale.Text);
+            cmd1.Parameters.AddWithValue("Gender", gen);
             cmd1.Parameters.AddWithValue("Address", txtaddress.Text);
-            cmd1.Parameters.AddWithValue("City", txtcity.Text);
+            cmd1.Parameters.AddWithValue("City", txtpassword.Text);
             cmd1.Parameters.AddWithValue("Password", txtpassword.Text);
             Response.Write(cmd1.CommandText);
 

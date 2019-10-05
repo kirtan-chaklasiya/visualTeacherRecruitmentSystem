@@ -3,9 +3,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <p>
-        &nbsp;</p>
-    <p>
+      <style>
+        .login-form {
+                width: 80%;
+                background: #f1f1f1;
+                height: 800px;
+                padding: 80px 40px;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 70%;
+                transform: translate(-50%,-50%);
+                box-shadow:1px 2px 50px 0px rgb(9, 23, 66);
+        }
+
+    </style>
+    <div class="login-form">
         &nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="18pt" Text="View/Download Resumes"></asp:Label>
     </p>
     <p>
@@ -39,5 +52,6 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Resume]"></asp:SqlDataSource>
         <br />
     </p>
+        </div>
 </asp:Content>
 

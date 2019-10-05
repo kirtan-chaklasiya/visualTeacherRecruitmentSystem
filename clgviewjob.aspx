@@ -3,9 +3,25 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <style>
+        .login-form {
+                width: 80%;
+                background: #f1f1f1;
+                height: 800px;
+                padding: 80px 40px;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 70%;
+                transform: translate(-50%,-50%);
+                box-shadow:1px 2px 50px 0px rgb(9, 23, 66);
+        }
+
+    </style>
     <p>
         <br />
     </p>
+     <div class="login-form">
     <p>
         <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="18pt" Text="View jobs"></asp:Label>
     </p>
@@ -13,6 +29,7 @@
         <asp:Label ID="lblerror" runat="server" ForeColor="Red"></asp:Label>
     </p>
     <p>
+       
         <asp:GridView ID="dgvviewjobs" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="job_id" DataSourceID="SqlDataSource1" Width="100%">
             <Columns>
                 <asp:BoundField DataField="job_id" HeaderText="Job id" InsertVisible="False" ReadOnly="True" SortExpression="job_id" />
@@ -45,5 +62,6 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [post_job]"></asp:SqlDataSource>
     </p>
+    </div>
 </asp:Content>
 

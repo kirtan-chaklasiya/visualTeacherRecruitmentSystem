@@ -6,6 +6,7 @@
     <html>
     <head>
         <title></title>
+    <link href="bootstyle.css" rel="stylesheet" />
    
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <style>
@@ -24,6 +25,8 @@ body {
     left:50%;
     top:70%;
     transform:translate(-50%,-50%);
+                    box-shadow:1px 2px 50px 0px rgb(9, 23, 66);
+
     
 }
             .txtb {
@@ -99,7 +102,7 @@ body {
         </div>
 
         <div class="txtb">
-            <asp:TextBox ID="txtpassword" runat="server" placeholder="Password" CssClass="txtpass"></asp:TextBox>
+            <asp:TextBox ID="txtpassword" runat="server" placeholder="Password" CssClass="txtpass" TextMode="Password"></asp:TextBox>
         </div>
         <asp:Button ID="btnlogin" runat="server" Text="Login" CssClass="lgnbutton" OnClick="btnlogin_Click" />
 

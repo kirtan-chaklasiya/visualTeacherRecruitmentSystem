@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMasterPage.master" AutoEventWireup="true" CodeFile="userfeedback.aspx.cs" Inherits="Default3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="bootstyle.css" rel="stylesheet" />
     <style type="text/css">
 
         .auto-style2 {
@@ -39,6 +40,7 @@
                 left: 50%;
                 top: 85%;
                 transform: translate(-50%,-50%);
+                box-shadow:1px 2px 50px 0px rgb(9, 23, 66);
         }
         .tsubmit {
                 display:block;

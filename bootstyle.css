@@ -1,0 +1,16 @@
+﻿@media only screen and (max-width:768px) {
+    navbar {
+        padding-left:1rem;
+    }
+    login-form {
+        position:initial;
+        widows:initial;
+        height:initial;
+    }
+    loginbox {
+            position:initial;
+        widows:initial;
+        height:initial;
+    }
+} 
+

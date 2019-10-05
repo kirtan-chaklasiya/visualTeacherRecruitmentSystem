@@ -1,11 +1,43 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMasterPage.master" AutoEventWireup="true" CodeFile="jobdetails.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="bootstyle.css" rel="stylesheet" />
+    <style>
+        .login-form {
+                width: 80%;
+                background: #f1f1f1;
+                height: 800px;;
+                padding: 80px 40px;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 85%;
+                transform: translate(-50%,-50%);
+                                box-shadow:1px 2px 50px 0px rgb(9, 23, 66);
+
+        }
+        .tsubmit {
+                display:block;
+                width:15%;
+                height:35px;
+                border:none;
+                background:linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+                background-size:200%;
+                color:#fff;
+                outline:none;
+                cursor:pointer;
+                transition:.5s;
+            }
+            .tsubmit:hover {
+                background-position:right;
+            }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p>
         <br />
     </p>
+    <div class="login-form">
     <p style="text-align: left">
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="job_id" DataSourceID="SqlDataSource1" Height="50px" Width="100%">
             <EditRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
@@ -29,7 +61,8 @@
         </asp:SqlDataSource>
     </p>
     <p>
-        <asp:Button ID="btnapplynow" runat="server" OnClick="btnapplynow_Click" Text="Apply Now" BackColor="#003399" ForeColor="White" />
+        <center><asp:Button ID="btnapplynow" runat="server" OnClick="btnapplynow_Click" Text="Apply Now" BackColor="#003399" ForeColor="White" CssClass="tsubmit" /></center>
     </p>
+        </div>
 </asp:Content>
 

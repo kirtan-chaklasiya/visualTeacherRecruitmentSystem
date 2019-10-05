@@ -4,20 +4,29 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    
+     <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Teacher Reqruitment System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./Style.css" />
+  <link rel="stylesheet" href="./mobile-style.css">
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="15pt" ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
+        <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="17pt" ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
             <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
             <DynamicMenuStyle BackColor="#B5C7DE" />
             <DynamicSelectedStyle BackColor="#507CD1" />
             <Items>
-                <asp:MenuItem NavigateUrl="~/clghome.aspx" Text="Home" Value="Home"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="#" Text="Jobs" Value="Jobs">
                     <asp:MenuItem NavigateUrl="~/clgaddnewjob.aspx" Text="Add new jobs" Value="Add new jobs"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/clgviewjob.aspx" Text="View/Edit/Delete" Value="View/Edit/Delete"></asp:MenuItem>
@@ -27,9 +36,6 @@
                 </asp:MenuItem>
                 <asp:MenuItem Text="Feedback" Value="Feedback">
                     <asp:MenuItem Text="View Feedback" Value="View Feedback" NavigateUrl="~/clgviewfeedback.aspx"></asp:MenuItem>
-                </asp:MenuItem>
-                <asp:MenuItem Text="Query" Value="Query">
-                    <asp:MenuItem NavigateUrl="~/clgviewquery.aspx" Text="View Query" Value="View Query"></asp:MenuItem>
                 </asp:MenuItem>
             </Items>
             <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
@@ -41,5 +47,11 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
